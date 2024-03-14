@@ -1,2 +1,5 @@
-
-git
+spring:
+  application:
+    name: springboot-profile
+  profiles:
+    active: dev
