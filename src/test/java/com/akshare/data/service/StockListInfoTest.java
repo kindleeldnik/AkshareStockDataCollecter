@@ -19,4 +19,10 @@ class StockListInfoTest {
     void getStockInfo() {
         System.out.println(stockListInfo.getStockInfo());
     }
+
+
+    @Test
+    void getAllStockList() {
+        System.out.println(stockListInfo.getAllStockList());;
+    }
 }
