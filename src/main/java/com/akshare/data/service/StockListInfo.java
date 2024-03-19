@@ -2,18 +2,18 @@ package com.akshare.data.service;
 
 
 import com.akshare.data.webdataclient.StockInfoClient;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class StockListInfo {
 
-    @Autowired
+    @Resource
     private StockInfoClient stockInfoClient;
 
-    public JSONArray getStockInfo(){
-        JSONArray stockList = stockInfoClient.getStockList();
+    public String getStockInfo(){
+        String stockList = stockInfoClient.getStockList();
         return stockList;
     }
 
