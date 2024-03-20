@@ -5,20 +5,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StockListInfoTest {
+class StockBasicInfoTest {
 
     @Autowired
-    private StockListInfo stockListInfo;
+    private StockBasicInfo stockBasicInfo;
 
 
     @Test
     void getStockInfo() {
-        System.out.println(stockListInfo.getStockInfo());
+        System.out.println(stockBasicInfo.getStockInfo());
     }
 
 
     @Test
     void getAllStockList() {
-        System.out.println(stockListInfo.getAllStockList());
+        System.out.println(stockBasicInfo.getAllStockList());
     }
 }

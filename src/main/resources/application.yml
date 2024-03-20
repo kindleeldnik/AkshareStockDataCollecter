@@ -3,3 +3,7 @@ spring:
     name: springboot-profile
   profiles:
     active: dev
+
+
+sse:
+  block-type: [主板A股, 主板B股, 科创板]

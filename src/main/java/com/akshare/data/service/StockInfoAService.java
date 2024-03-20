@@ -1,8 +1,7 @@
 package com.akshare.data.service;
 
-import com.akshare.data.apiclient.StockInfoApiClient;
+import com.akshare.data.apiclient.StockBasicInfoApiClient;
 import com.akshare.data.repository.StockInfoARepository;
-import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +12,9 @@ public class StockInfoAService {
     private StockInfoARepository stockInfoARepository;
 
     @Autowired
-    private StockInfoApiClient stockInfoApiClient;
+    private StockBasicInfoApiClient stockBasicInfoApiClient;
 
     public void saveAllStockInfoA() {
-        stockInfoARepository.saveAll(stockInfoApiClient.getAllStockList());
+        stockInfoARepository.saveAll(stockBasicInfoApiClient.getAllStockList());
     }
 }
