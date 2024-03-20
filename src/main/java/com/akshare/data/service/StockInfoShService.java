@@ -17,14 +17,21 @@ public class StockInfoShService {
     @Autowired
     private StockBasicInfo stockBasicInfo;
 
-    @Value("${sse.block-type}")
-    private ArrayList<String> blockTypeList;
-
     public void saveBlockStockInfo(){
-        System.out.println(blockTypeList);
-//        for (String s : blockTypeList) {
-//            stockInfoShRepository.saveAll(stockBasicInfo.getBlockStockList(s));
-//        }
+        ArrayList<String>  blockTypeList = new ArrayList<>();
+        blockTypeList.add("主板A股");
+        blockTypeList.add("主板B股");
+        blockTypeList.add("科创板");
+
+        for (String s : blockTypeList) {
+//            System.out.println(stockBasicInfo.getBlockStockList(s));
+            stockBasicInfo.getBlockStockList(s).forEach(stockInfoSh -> {
+                stockInfoSh.setBlockType(s);
+                stockInfoShRepository.save(stockInfoSh);
+
+            });
+        }
+
     }
 
 }
