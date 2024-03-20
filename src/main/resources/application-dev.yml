@@ -5,10 +5,15 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.122.150:3306/akshare?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.98.11:3306/akshare?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: p@ssw0rd
+
+  jpa:
+    show-sql: true  #显示SQL
+    hibernate:
+      ddl-auto: create #自动生成表
 
 forest:
 #  bean-id: config0     # 在spring上下文中bean的id, 默认值为forestConfiguration
