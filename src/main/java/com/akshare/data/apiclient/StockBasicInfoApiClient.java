@@ -8,7 +8,7 @@ import com.dtflys.forest.annotation.Get;
 import java.util.ArrayList;
 
 
-@BaseRequest(baseURL = "http://192.168.98.50:8888/api/public")
+@BaseRequest(baseURL = "http://192.168.122.180:8888/api/public")
 public interface StockBasicInfoApiClient {
 
     @Get("/stock_zh_a_hist")
