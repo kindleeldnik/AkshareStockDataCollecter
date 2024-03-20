@@ -1,8 +1,7 @@
-package com.akshare.data.service;
+package com.akshare.data.apiservice;
 
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Component
 public class FinancialStatement {
