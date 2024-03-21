@@ -3,13 +3,12 @@ package com.akshare.data.apiservice;
 
 import com.akshare.data.apiclient.StockBasicInfoApiClient;
 import com.akshare.data.entity.StockInfoA;
+import com.akshare.data.entity.StockInfoSz;
 import com.akshare.data.entity.StockInfoSh;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 @Component
 public class StockBasicInfo {
@@ -39,7 +38,15 @@ public class StockBasicInfo {
      */
     public ArrayList<StockInfoSh> getBlockStockList(String blockType) {
         return stockBasicInfoApiClient.getAllShStockBlockList(blockType);
+    }
 
+
+    /**
+     * 获取深证证券交易所股票代码和股票简称数据
+     * @return 深交所所有A股信息的JSONArray
+     */
+    public ArrayList<StockInfoSz> getAllSzStockList() {
+        return stockBasicInfoApiClient.getAllSzStockList("A股列表");
     }
 
 

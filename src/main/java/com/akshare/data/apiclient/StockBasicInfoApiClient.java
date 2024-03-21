@@ -1,7 +1,7 @@
 package com.akshare.data.apiclient;
 
 import com.akshare.data.entity.StockInfoA;
-import com.akshare.data.entity.StockInfoSZ;
+import com.akshare.data.entity.StockInfoSz;
 import com.akshare.data.entity.StockInfoSh;
 import com.dtflys.forest.annotation.BaseRequest;
 import com.dtflys.forest.annotation.Get;
@@ -39,6 +39,6 @@ public interface StockBasicInfoApiClient {
      * @return 深证证券交易所股票代码和简称数据
      */
     @Get("/stock_info_sz_name_code?symbol={0}")
-    ArrayList<StockInfoSZ> getAllSzStockList(String stockType);
+    ArrayList<StockInfoSz> getAllSzStockList(String stockType);
 
 }
