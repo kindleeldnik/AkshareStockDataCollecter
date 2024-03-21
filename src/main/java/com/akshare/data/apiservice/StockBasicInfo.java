@@ -3,6 +3,7 @@ package com.akshare.data.apiservice;
 
 import com.akshare.data.apiclient.StockBasicInfoApiClient;
 import com.akshare.data.entity.StockInfoA;
+import com.akshare.data.entity.StockInfoBz;
 import com.akshare.data.entity.StockInfoSz;
 import com.akshare.data.entity.StockInfoSh;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +50,13 @@ public class StockBasicInfo {
         return stockBasicInfoApiClient.getAllSzStockList("A股列表");
     }
 
+
+    /**
+     * 获取所有北证所股票列表
+     * @return 包含StockInfoBz对象的ArrayList
+     */
+    public ArrayList<StockInfoBz> getAllBzStockList() {
+        return stockBasicInfoApiClient.getAllBzStockList();
+    }
 
 }
