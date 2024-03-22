@@ -2,10 +2,7 @@ package com.akshare.data.apiservice;
 
 
 import com.akshare.data.apiclient.StockBasicInfoApiClient;
-import com.akshare.data.entity.StockInfoA;
-import com.akshare.data.entity.StockInfoBz;
-import com.akshare.data.entity.StockInfoSz;
-import com.akshare.data.entity.StockInfoSh;
+import com.akshare.data.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -57,6 +54,20 @@ public class StockBasicInfo {
      */
     public ArrayList<StockInfoBz> getAllBzStockList() {
         return stockBasicInfoApiClient.getAllBzStockList();
+    }
+
+
+
+    /**
+     * 获取所有两网及退市股票列表。
+     * <p>
+     * 该方法通过调用stockBasicInfoApiClient的getAllStopStockList方法，从股票基本信息API客户端获取所有停盘股票的列表。
+     * 这个列表包含了所有两网及退市股票的信息。
+     *
+     * @return ArrayList<StockInfoStop> - 返回一个包含所有两网及退市票信息的ArrayList。
+     */
+    public ArrayList<StockInfoStop> getAllStopStockList() {
+        return stockBasicInfoApiClient.getAllStopStockList();
     }
 
 }
