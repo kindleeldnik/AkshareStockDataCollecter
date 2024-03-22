@@ -55,4 +55,10 @@ public interface StockBasicInfoApiClient {
     ArrayList<StockInfoStop> getAllStopStockList();
 
 
+    /**
+     * 获取所有交易日历数据
+     * @return 包含所有交易日历数据
+     */
+    @Get("/tool_trade_date_hist_sina")
+    ArrayList<TradeDate> getAllTradeDateList();
 }

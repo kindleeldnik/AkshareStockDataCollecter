@@ -70,4 +70,13 @@ public class StockBasicInfo {
         return stockBasicInfoApiClient.getAllStopStockList();
     }
 
+
+    /**
+     * 获取所有交易日历信息
+     * @return ArrayList<TradeDate> - 返回一个包含所有交易日历信息的ArrayList。
+     */
+    public ArrayList<TradeDate> getAllTradeDateList() {
+        return stockBasicInfoApiClient.getAllTradeDateList();
+    }
+
 }
