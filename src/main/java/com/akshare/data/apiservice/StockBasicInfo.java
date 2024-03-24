@@ -1,7 +1,7 @@
 package com.akshare.data.apiservice;
 
 
-import com.akshare.data.apiclient.StockBasicInfoApiClient;
+import com.akshare.data.apiclient.StockInfoApiClient;
 import com.akshare.data.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,10 +12,10 @@ import java.util.ArrayList;
 public class StockBasicInfo {
 
     @Autowired
-    private StockBasicInfoApiClient stockBasicInfoApiClient;
+    private StockInfoApiClient stockInfoApiClient;
 
     public String getStockInfo(){
-        return stockBasicInfoApiClient.getStockList();
+        return stockInfoApiClient.getStockList();
     }
 
 
@@ -25,7 +25,7 @@ public class StockBasicInfo {
      * @return 包含所有股票信息的JSONArray
      */
     public ArrayList<StockInfoA> getAllStockList(){
-        return stockBasicInfoApiClient.getAllStockList();
+        return stockInfoApiClient.getAllStockList();
     }
 
 
@@ -35,7 +35,7 @@ public class StockBasicInfo {
      * @return  包含指定板块所有股票信息的JSONArray
      */
     public ArrayList<StockInfoSh> getBlockStockList(String blockType) {
-        return stockBasicInfoApiClient.getAllShStockBlockList(blockType);
+        return stockInfoApiClient.getAllShStockBlockList(blockType);
     }
 
 
@@ -44,7 +44,7 @@ public class StockBasicInfo {
      * @return 深交所所有A股信息的JSONArray
      */
     public ArrayList<StockInfoSz> getAllSzStockList() {
-        return stockBasicInfoApiClient.getAllSzStockList("A股列表");
+        return stockInfoApiClient.getAllSzStockList("A股列表");
     }
 
 
@@ -53,7 +53,7 @@ public class StockBasicInfo {
      * @return 包含StockInfoBz对象的ArrayList
      */
     public ArrayList<StockInfoBz> getAllBzStockList() {
-        return stockBasicInfoApiClient.getAllBzStockList();
+        return stockInfoApiClient.getAllBzStockList();
     }
 
 
@@ -67,7 +67,7 @@ public class StockBasicInfo {
      * @return ArrayList<StockInfoStop> - 返回一个包含所有两网及退市票信息的ArrayList。
      */
     public ArrayList<StockInfoStop> getAllStopStockList() {
-        return stockBasicInfoApiClient.getAllStopStockList();
+        return stockInfoApiClient.getAllStopStockList();
     }
 
 
@@ -76,7 +76,7 @@ public class StockBasicInfo {
      * @return ArrayList<TradeDate> - 返回一个包含所有交易日历信息的ArrayList。
      */
     public ArrayList<TradeDate> getAllTradeDateList() {
-        return stockBasicInfoApiClient.getAllTradeDateList();
+        return stockInfoApiClient.getAllTradeDateList();
     }
 
 }

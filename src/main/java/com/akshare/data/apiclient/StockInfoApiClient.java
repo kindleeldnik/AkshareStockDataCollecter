@@ -8,7 +8,9 @@ import java.util.ArrayList;
 
 
 @BaseRequest(baseURL = "http://192.168.98.50:8888/api/public")
-public interface StockBasicInfoApiClient {
+public interface StockInfoApiClient {
+
+
 
     @Get("/stock_zh_a_hist")
     String getStockList();
@@ -61,4 +63,6 @@ public interface StockBasicInfoApiClient {
      */
     @Get("/tool_trade_date_hist_sina")
     ArrayList<TradeDate> getAllTradeDateList();
+
+
 }
